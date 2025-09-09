@@ -23,7 +23,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/yudada
     username: root
-    password: 123456
+    password: hqq144525372
   # Redis 配置
   # todo 需替换配置，然后取消注释
   redis:
@@ -107,4 +107,4 @@ knife4j:
           - com.yupi.yudada.controller
 # AI 配置
 ai:
-  apiKey: 改为自己的 key
+  apiKey: 6f966ea062134febb1fc39943bfc1be9.i6CCz0dD8DfshX3w
