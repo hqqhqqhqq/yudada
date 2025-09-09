@@ -1,4 +1,6 @@
-# Spring Boot 配置文件
+# 公共配置文件
+# @author <a href="https://github.com/liyupi">程序员鱼皮</a>
+# @from <a href="https://yupi.icu">编程导航知识星球</a>
 spring:
   application:
     name: yudada-backend
@@ -21,7 +23,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/yudada
     username: root
-    password: hqq144525372
+    password: 123456
   # Redis 配置
   # todo 需替换配置，然后取消注释
   redis:
@@ -37,7 +39,6 @@ spring:
       max-file-size: 10MB
   # 分库分表配置
   shardingsphere:
-    enabled: false
     #数据源配置
     datasource:
       # 多数据源以逗号隔开即可
@@ -47,7 +48,7 @@ spring:
         driver-class-name: com.mysql.cj.jdbc.Driver
         jdbc-url: jdbc:mysql://localhost:3306/yudada
         username: root
-        password: hqq144525372
+        password: 123456
     # 规则配置
     rules:
       sharding:
@@ -106,4 +107,4 @@ knife4j:
           - com.yupi.yudada.controller
 # AI 配置
 ai:
-  apiKey: 6f966ea062134febb1fc39943bfc1be9.i6CCz0dD8DfshX3w
+  apiKey: 改为自己的 key

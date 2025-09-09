@@ -133,7 +133,7 @@ const loadData = async () => {
   if (res.data.code === 0) {
     app.value = res.data.data as any;
   } else {
-    message.error("获取试题失败，" + res.data.message);
+    message.error("获取应用失败，" + res.data.message);
   }
   // 获取题目
   res = await listQuestionVoByPageUsingPost({

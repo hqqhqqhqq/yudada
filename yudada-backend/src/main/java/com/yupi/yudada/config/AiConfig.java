@@ -14,6 +14,7 @@ public class AiConfig {
     /**
      * apiKey，需要从开放平台获取
      */
+
     private String apiKey;
 
     @Bean
