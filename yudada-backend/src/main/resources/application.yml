@@ -1,6 +1,4 @@
-# 公共配置文件
-# @author <a href="https://github.com/liyupi">程序员鱼皮</a>
-# @from <a href="https://yupi.icu">编程导航知识星球</a>
+# Spring Boot 配置文件
 spring:
   application:
     name: yudada-backend
@@ -39,6 +37,7 @@ spring:
       max-file-size: 10MB
   # 分库分表配置
   shardingsphere:
+    enabled: false
     #数据源配置
     datasource:
       # 多数据源以逗号隔开即可
@@ -48,7 +47,7 @@ spring:
         driver-class-name: com.mysql.cj.jdbc.Driver
         jdbc-url: jdbc:mysql://localhost:3306/yudada
         username: root
-        password: 123456
+        password: hqq144525372
     # 规则配置
     rules:
       sharding:

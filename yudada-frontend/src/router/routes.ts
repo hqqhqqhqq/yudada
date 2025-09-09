@@ -27,7 +27,7 @@ export const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/add/app",
-    name: "创建应用",
+    name: "创建试题",
     component: AddAppPage,
   },
   {
@@ -59,7 +59,7 @@ export const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/app/detail/:id",
-    name: "应用详情页",
+    name: "试题详情页",
     props: true,
     component: AppDetailPage,
     meta: {
@@ -104,7 +104,7 @@ export const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/admin/app",
-    name: "应用管理",
+    name: "试题管理",
     component: AdminAppPage,
     meta: {
       access: ACCESS_ENUM.ADMIN,
@@ -130,14 +130,6 @@ export const routes: Array<RouteRecordRaw> = [
     path: "/admin/user_answer",
     name: "回答管理",
     component: AdminUserAnswerPage,
-    meta: {
-      access: ACCESS_ENUM.ADMIN,
-    },
-  },
-  {
-    path: "/app_statistic",
-    name: "应用统计",
-    component: AppStatisticPage,
     meta: {
       access: ACCESS_ENUM.ADMIN,
     },

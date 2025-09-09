@@ -1,6 +1,6 @@
 <template>
   <div id="addAppPage">
-    <h2 style="margin-bottom: 32px">创建应用</h2>
+    <h2 style="margin-bottom: 32px">创建试题</h2>
     <a-form
       :model="form"
       :style="{ width: '480px' }"
@@ -8,26 +8,20 @@
       auto-label-width
       @submit="handleSubmit"
     >
-      <a-form-item field="appName" label="应用名称">
-        <a-input v-model="form.appName" placeholder="请输入应用名称" />
+      <a-form-item field="appName" label="试题名称">
+        <a-input v-model="form.appName" placeholder="请输入试题名称" />
       </a-form-item>
-      <a-form-item field="appDesc" label="应用描述">
-        <a-input v-model="form.appDesc" placeholder="请输入应用描述" />
+      <a-form-item field="appDesc" label="试题描述">
+        <a-input v-model="form.appDesc" placeholder="请输入试题描述" />
       </a-form-item>
-      <a-form-item field="appIcon" label="应用图标">
-        <a-input v-model="form.appIcon" placeholder="请输入应用图标" />
+      <a-form-item field="appIcon" label="试题图标">
+        <a-input v-model="form.appIcon" placeholder="请输入试题图标" />
       </a-form-item>
-      <!--      <a-form-item field="appIcon" label="应用图标">-->
-      <!--        <PictureUploader-->
-      <!--          :value="form.appIcon"-->
-      <!--          :onChange="(value) => (form.appIcon = value)"-->
-      <!--        />-->
-      <!--      </a-form-item>-->
-      <a-form-item field="appType" label="应用类型">
+      <a-form-item field="appType" label="试题类型">
         <a-select
           v-model="form.appType"
           :style="{ width: '320px' }"
-          placeholder="请选择应用类型"
+          placeholder="请选择试题类型"
         >
           <a-option
             v-for="(value, key) of APP_TYPE_MAP"
@@ -131,7 +125,7 @@ const handleSubmit = async () => {
     res = await addAppUsingPost(form.value);
   }
   if (res.data.code === 0) {
-    message.success("操作成功，即将跳转到应用详情页");
+    message.success("操作成功，即将跳转到试题详情页");
     setTimeout(() => {
       router.push(`/app/detail/${props.id || res.data.data}`);
     }, 3000);

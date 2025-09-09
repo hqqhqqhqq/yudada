@@ -5,10 +5,10 @@
     layout="inline"
     @submit="doSearch"
   >
-    <a-form-item field="appId" label="应用 id">
+    <a-form-item field="appId" label="试题 id">
       <a-input
         v-model="formSearchParams.appId"
-        placeholder="请输入应用 id"
+        placeholder="请输入试题 id"
         allow-clear
       />
     </a-form-item>
@@ -154,7 +154,7 @@ const columns = [
     slotName: "questionContent",
   },
   {
-    title: "应用 id",
+    title: "试题 id",
     dataIndex: "appId",
   },
   {

@@ -7,11 +7,6 @@
       <a-layout-content class="content">
         <router-view />
       </a-layout-content>
-      <a-layout-footer class="footer">
-        <a href="https://www.code-nav.cn" target="_blank">
-          编程导航 by 程序员鱼皮
-        </a>
-      </a-layout-footer>
     </a-layout>
   </div>
 </template>
@@ -30,17 +25,11 @@ import GlobalHeader from "@/components/GlobalHeader.vue";
 }
 
 #basicLayout .content {
-  max-width: 1200px;
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto 28px;
   padding: 20px;
   background: linear-gradient(to right, #fefefe, #fff);
-}
-
-.footer {
-  padding: 16px;
-  text-align: center;
-  background: #efefef;
 }
 </style>

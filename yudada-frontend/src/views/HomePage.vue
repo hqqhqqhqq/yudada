@@ -3,7 +3,7 @@
     <div class="searchBar">
       <a-input-search
         :style="{ width: '320px' }"
-        placeholder="快速发现答题应用"
+        placeholder="快速发现答题试题"
         button-text="搜索"
         size="large"
         search-button
