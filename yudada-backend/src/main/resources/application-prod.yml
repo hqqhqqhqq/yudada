@@ -18,7 +18,7 @@ spring:
     host: 10.37.108.14
     port: 6379
     timeout: 5000
-    password: 123456
+    password: Ldu@020813
 mybatis-plus:
   configuration:
     # 生产环境关闭日志
