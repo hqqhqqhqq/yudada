@@ -8,9 +8,9 @@ spring:
   # todo 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/yudada
+    url: jdbc:mysql://sh-cynosdbmysql-grp-g8abla6s.sql.tencentcdb.com:23310/yudada
     username: root
-    password: 123456
+    password: Ldu@020813
   # Redis 配置
   # todo 需替换配置
   redis:
@@ -29,3 +29,6 @@ knife4j:
     enable: true
     username: root
     password: 123456
+# AI 配置
+ai:
+  apiKey: 6f966ea062134febb1fc39943bfc1be9.i6CCz0dD8DfshX3w
