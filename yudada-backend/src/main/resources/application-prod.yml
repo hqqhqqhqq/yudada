@@ -2,7 +2,7 @@
 # @author <a href="https://github.com/liyupi">程序员鱼皮</a>
 # @from <a href="https://yupi.icu">编程导航知识星球</a>
 server:
-  port: 8101
+  port: 8080
 spring:
   # 数据库配置
   # todo 需替换配置
@@ -30,5 +30,5 @@ knife4j:
     username: root
     password: 123456
 # AI 配置
-#ai:
-#  apiKey: 6f966ea062134febb1fc39943bfc1be9.i6CCz0dD8DfshX3w
+ai:
+  apiKey: 6f966ea062134febb1fc39943bfc1be9.i6CCz0dD8DfshX3w
