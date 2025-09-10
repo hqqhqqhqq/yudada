@@ -13,12 +13,12 @@ spring:
     password: Ldu@020813
   # Redis 配置
   # todo 需替换配置
-#  redis:
-#    database: 1
-#    host: localhost
-#    port: 6379
-#    timeout: 5000
-#    password: 123456
+  redis:
+    database: 1
+    host: localhost
+    port: 6379
+    timeout: 5000
+    password: 123456
 mybatis-plus:
   configuration:
     # 生产环境关闭日志
@@ -29,6 +29,3 @@ knife4j:
     enable: true
     username: root
     password: 123456
-# AI 配置
-ai:
-  apiKey: 6f966ea062134febb1fc39943bfc1be9.i6CCz0dD8DfshX3w
