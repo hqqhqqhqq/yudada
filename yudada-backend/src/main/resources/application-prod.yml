@@ -2,13 +2,13 @@
 # @author <a href="https://github.com/liyupi">程序员鱼皮</a>
 # @from <a href="https://yupi.icu">编程导航知识星球</a>
 server:
-  port: 8080
+  port: 8101
 spring:
   # 数据库配置
   # todo 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://sh-cynosdbmysql-grp-g8abla6s.sql.tencentcdb.com:23310/yudada
+    url: jdbc:mysql://10.37.108.14:3306/yudada
     username: root
     password: Ldu@020813
   # Redis 配置
