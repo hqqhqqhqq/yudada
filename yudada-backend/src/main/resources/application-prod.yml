@@ -8,14 +8,14 @@ spring:
   # todo 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://sh-cynosdbmysql-grp-g8abla6s.sql.tencentcdb.com:23310/yudada
+    url: jdbc:mysql://10.37.108.14:3306/yudada
     username: root
     password: Ldu@020813
   # Redis 配置
   # todo 需替换配置
   redis:
     database: 1
-    host: localhost
+    host: 10.37.108.14
     port: 6379
     timeout: 5000
     password: 123456
