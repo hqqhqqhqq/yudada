@@ -3,6 +3,10 @@
 # @from <a href="https://yupi.icu">编程导航知识星球</a>
 server:
   port: 8101
+  servlet:
+    session:
+      cookie:
+        max-age: 2592000
 spring:
   # 数据库配置
   # todo 需替换配置
@@ -15,10 +19,10 @@ spring:
   # todo 需替换配置
   redis:
     database: 1
-    host: 10.37.108.14
+    host: localhost
     port: 6379
     timeout: 5000
-    password: Ldu@020813
+    password: 123456
 mybatis-plus:
   configuration:
     # 生产环境关闭日志
@@ -29,3 +33,6 @@ knife4j:
     enable: true
     username: root
     password: 123456
+# AI 配置
+ai:
+  apiKey: 6f966ea062134febb1fc39943bfc1be9.i6CCz0dD8DfshX3w
