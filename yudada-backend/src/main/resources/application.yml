@@ -35,6 +35,13 @@ spring:
     multipart:
       # 大小限制
       max-file-size: 10MB
+    session:
+      cookie:
+        # 30 天过期
+        max-age: 2592000
+        # 解决跨域
+        same-site: none
+#        secure: true
   # 分库分表配置
   shardingsphere:
     enabled: false
