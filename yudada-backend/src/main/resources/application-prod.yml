@@ -1,28 +1,52 @@
 # 线上配置文件
 # @author <a href="https://github.com/liyupi">程序员鱼皮</a>
-# @from <a href="https://yupi.icu">编程导航知识星球</a>
+# @from <a href="https://www.code-nav.cn">编程导航</a>
 server:
   port: 8101
-  servlet:
-    session:
-      cookie:
-        max-age: 2592000
 spring:
   # 数据库配置
-  # todo 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://sh-cynosdbmysql-grp-g8abla6s.sql.tencentcdb.com:23310/yudada
     username: root
     password: Ldu@020813
   # Redis 配置
-  # todo 需替换配置
   redis:
     database: 1
     host: localhost
     port: 6379
-    timeout: 5000
     password: 123456
+  # 分库分表配置（开源代码部署可忽略）
+  shardingsphere:
+    #数据源配置
+    datasource:
+      # 多数据源以逗号隔开即可
+      names: yudada
+      yudada:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://sh-cynosdbmysql-grp-g8abla6s.sql.tencentcdb.com:23310/yudada
+        username: root
+        password: Ldu@020813
+    # 规则配置
+    rules:
+      sharding:
+        # 分片算法配置
+        sharding-algorithms:
+          # 自定义分片规则名
+          answer-table-inline:
+            ## inline 类型是简单的配置文件里面就能写的类型，其他还有自定义类等等
+            type: INLINE
+            props:
+              algorithm-expression: user_answer_$->{appId % 2}
+        tables:
+          user_answer:
+            actual-data-nodes: yudada.user_answer_$->{0..1}
+            # 分表策略
+            table-strategy:
+              standard:
+                sharding-column: appId
+                sharding-algorithm-name: answer-table-inline
 mybatis-plus:
   configuration:
     # 生产环境关闭日志
@@ -33,6 +57,3 @@ knife4j:
     enable: true
     username: root
     password: 123456
-# AI 配置
-ai:
-  apiKey: 6f966ea062134febb1fc39943bfc1be9.i6CCz0dD8DfshX3w
